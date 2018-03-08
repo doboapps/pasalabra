@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/json.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
+    <title>Pasapalabra</title>
+</head>
+<body>
+
+    <span id="answer-value"></span>
+
+    <div onclick="showScore()" id="close">×</div>
+
+    <div id="messages">
+        <div id="name" class="msg">
+                <h4>¿Cúal es tu nombre?</h4>
+                <input id="text-name" type="text" placeholder="Introduce tu nombre">
+                <input  class="btn-blue" onclick="NewGameAndRanking()" type="button" value="Continuar">
+        </div>
+
+        <div id="welcome" class="msg">
+            <h3>BIENVENIDO A PASALABRA</h3>
+            <h4>REGLAS:</h4>
+            <p> Se mostraran unas definiciones por pantalla y el usuario deberá responder con la palabra que corresponden. El usuario tiene la opción de pulsar Pasapalabra y dejar esa definición para mas adelante.<br><br> 
+
+                El programa es sensible a la acentuación, asi que se debe introducir la palabra sin tilde. Es posible utilizar la tecla ENTER para enviar la palabra, y la tecla SPACE para hacer pasapalabra.</p>
+            <input class="btn-blue" onclick="FromWelcomeToName()" type="button" value="Empezar">         
+        </div>
+
+        <div id="score" class="msg">
+            <h3 id="title-score">TU PUNTUACIÓN</h3>
+            <p id="score-list"></p>
+            <input  class="btn-blue" onclick="showRanking()" type="button" value="Aceptar">
+
+        </div>
+
+        <div id="ranking" class="msg">
+            <h3>RANKING</h3>
+            <p id="ranking-list"></p>
+            <input  class="btn-blue" onclick="FromWelcomeToName(1)" type="button" value="Jugar de nuevo">
+            <input  class="btn-red" onclick="location.reload()" type="button" value="Terminar">
+
+
+
+        </div>
+        
+
+
+    </div>
+
+    <div id="wallpaper">
+        <img src="img/wallpaper.png" alt="wallpaper-pasalabra">
+    </div>
+    <div id="legend">
+        <section>
+            <div class="time">
+                <b id="time">000</b>
+            </div>
+
+            <div class="correct">
+                <b id="correct">0</b>
+            </div>
+            
+
+            <div class="question">
+                <div class="letter-container">
+                    <b id="letter" class="letter">W</b>
+                </div>
+                <p id="question"></p>
+                <input id="answer" type="text" placeholder="Introduce tu respuesta">
+                <input onclick="CheckAnswer(false)" class="btn-blue" type="button" value="Responder">
+                <input onclick="CheckAnswer(true)" class="btn-green" type="button" value="Pasapalabra">
+            </div>
+        </section>
+    </div>
+  
+    
+
+        
+
+    <ul id="rosco">
+        <li>
+            <b>A</b>
+        </li>
+        <li>
+            <b>B</b>
+        </li>
+        <li>
+            <b>C</b>
+        </li>
+        <li>
+            <b>D</b>
+        </li>
+        <li>
+            <b>E</b>
+        </li>
+        <li>
+            <b>F</b>
+        </li>
+        <li>
+            <b>G</b>
+        </li>
+        <li>
+            <b>H</b>
+        </li>
+        <li>
+            <b>I</b>
+        </li>
+        <li>
+            <b>J</b>
+        </li>
+        <li>
+            <b>K</b>
+        </li>
+        <li>
+            <b>L</b>
+        </li>
+        <li>
+            <b>M</b>
+        </li>
+        <li>
+            <b>N</b>
+        </li>
+        <li>
+            <b>Ñ</b>
+        </li>
+        <li>
+            <b>O</b>
+        </li>
+        <li>
+            <b>P</b>
+        </li>
+        <li>
+            <b>Q</b>
+        </li>
+        <li>
+            <b>R</b>
+        </li>
+        <li>
+            <b>S</b>
+        </li>
+        <li>
+            <b>T</b>
+        </li>
+        <li>
+            <b>U</b>
+        </li>
+        <li>
+            <b>V</b>
+        </li>
+        <li>
+            <b>W</b>
+        </li>
+        <li>
+            <b>X</b>
+        </li>
+        <li>
+            <b>Y</b>
+        </li>
+        <li>
+            <b>Z</b>
+        </li>
+      
+    </ul>
+    <script src="js/app.js"></script>
+</body>
+</html>
