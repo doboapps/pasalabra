@@ -161,7 +161,7 @@ function CheckAnswer(pasapalabra){//comprueba si las respuestas son validas (bot
     document.getElementById("answer-value").innerHTML="";
     
     if(!pasapalabra){//si no se ha pulsado pasalabra
-            answerUser=(document.getElementById("answer").value).toLowerCase;
+            answerUser=document.getElementById("answer").value.toLowerCase();
 
         if(answerUser==answerTrue){
             score+=1;
@@ -235,6 +235,9 @@ function showRanking(){
         
         
     
+
+
+
 
 
 
